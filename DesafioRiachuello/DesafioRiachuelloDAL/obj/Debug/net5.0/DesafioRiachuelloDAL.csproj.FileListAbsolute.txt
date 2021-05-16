@@ -1,0 +1,17 @@
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\obj\Debug\net5.0\DesafioRiachuelloDAL.csprojAssemblyReference.cache
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\obj\Debug\net5.0\DesafioRiachuelloDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\obj\Debug\net5.0\DesafioRiachuelloDAL.AssemblyInfoInputs.cache
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\obj\Debug\net5.0\DesafioRiachuelloDAL.AssemblyInfo.cs
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\obj\Debug\net5.0\DesafioRiachuelloDAL.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\bin\Debug\net5.0\DesafioRiachuelloDAL.deps.json
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\bin\Debug\net5.0\DesafioRiachuelloDAL.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\bin\Debug\net5.0\ref\DesafioRiachuelloDAL.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\bin\Debug\net5.0\DesafioRiachuelloDAL.pdb
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\obj\Debug\net5.0\DesafioRiachuelloDAL.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\obj\Debug\net5.0\ref\DesafioRiachuelloDAL.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\obj\Debug\net5.0\DesafioRiachuelloDAL.pdb
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\bin\Debug\net5.0\CriptoAndHashService.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\bin\Debug\net5.0\ModelsServicesInterfaces.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\bin\Debug\net5.0\CriptoAndHashService.pdb
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\bin\Debug\net5.0\ModelsServicesInterfaces.pdb
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuelloDAL\obj\Debug\net5.0\DesafioRiachuelloDAL.csproj.CopyComplete

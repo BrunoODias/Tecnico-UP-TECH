@@ -4,4 +4,10 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CriptoAndHashService\CriptoAndHashService.csproj" />
+    <ProjectReference Include="..\DesafioRiachuelloDAL\DesafioRiachuelloDAL.csproj" />
+    <ProjectReference Include="..\ModelsServicesInterfaces\ModelsServicesInterfaces.csproj" />
+  </ItemGroup>
+
 </Project>

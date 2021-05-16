@@ -1,0 +1,68 @@
+﻿@model List<ModelsServicesInterfaces.ListBook>
+<style>
+    #PrincipalContent {
+        position: absolute;
+        top: 3.4rem;
+        max-width: 40rem;
+        height: calc(100% - 9.2rem);
+        width: 100%;
+    }
+
+    #TabContent {
+        height: calc(100% - 3.3rem) !important;
+    }
+
+    .tab-pane {
+        flex-wrap: wrap;
+    }
+    #TabContentSelector {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+</style>
+<div id="PrincipalContent">
+    @if (Model != null && Model.Count > 0)
+    {
+        <ul class="nav nav-tabs" id="TabContentSelector" role="tablist">
+            @{
+                bool first = true;
+            }
+            @foreach (var currentTab in Model)
+            {
+                @if (string.IsNullOrWhiteSpace(currentTab.Gender) == false && currentTab.Books != null && currentTab.Books.Count > 0)
+                {
+                    <li class="nav-item">
+                        <a class="nav-link clickable @(first ? " active " : "")" id="@currentTab.GenderType-tab-selector" data-toggle="tab" role="tab" aria-controls="@currentTab.GenderType-tab" aria-selected="@(first ? "true" : "false")">@currentTab.Gender</a>
+                    </li>
+                    first = false;
+                }
+            }
+        </ul>
+        <div class="tab-content w-100" id="TabContent">
+            @{
+                first = true;
+            }
+            @foreach (var currentTab in Model)
+            {
+                @if (string.IsNullOrWhiteSpace(currentTab.Gender) == false && currentTab.Books != null && currentTab.Books.Count > 0)
+                {
+                    <div class="tab-pane w-100 h-100 scrollable p-3 @(first? " show active d-flex " : "")" id="@currentTab.GenderType-tab" role="tabpanel" aria-labelledby="@currentTab.GenderType-tab">
+                        @foreach (var currentBook in currentTab.Books)
+                        {
+                            @if (currentBook.Code != 0)
+                            {
+                                @await Component.InvokeAsync("GenerateDisplayBook", currentBook)
+                            }
+                        }
+                    </div>
+                    first = false;
+                }
+            }
+        </div>
+    }
+</div>

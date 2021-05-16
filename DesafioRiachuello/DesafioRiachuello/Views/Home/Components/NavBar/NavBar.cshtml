@@ -1,0 +1,60 @@
+﻿<style>
+    .toggleFavoritesMenu {
+        transition: all 1s;
+        color: #eaea09;
+        font-size: 1.5rem;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 2px;
+        border: none;
+    }
+    .rotate {
+        transform: rotate(360deg);
+    }
+    .navbar {
+        background: #d8d7d7;
+        font-size: 1.3rem;
+    }
+</style>
+
+<nav class="navbar px-0">
+    <div style="width: 3rem;text-align: center;">
+        <i class="fas fa-star toggleFavoritesMenu clickable"></i>
+    </div>
+    <div class="d-flex p-0" style="margin-left: 0rem;margin-right: 0.5rem;width: calc(100% - 4rem);">
+        <input placeholder="Pesquisar..." class="form-control" style="width: calc(100% - 5rem);">
+        <div class="d-flex p-0" style="width: 5rem;justify-content: space-around;">
+            <i class="btn fas fa-search px-2 clickable" style="font-size: 1.3rem;"></i>
+            <div class="dropdown dropstart">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="toggleSearchFilter" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                <ul class="dropdown-menu p-2" aria-labelledby="toggleSearchFilter" style="white-space: nowrap;text-align: end;" data-bs-popper="none">
+                    <li style="text-align: center;">
+                    <label for="searchForBookName">Pesquisar por:</label></li>
+                    <li class="d-flex justify-content-between">
+                        <div>
+                            <label>Nome do livro</label>
+                        </div>
+                        <div>
+                            <input name="searchType" type="radio" checked="true">
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                        <div>
+                            <label>Nome do autor</label>
+                        </div>
+                        <div>
+                            <input name="searchType" type="radio">
+                        </div>
+                    </li>
+                    <li class="d-flex justify-content-between">
+                        <div>
+                            <label>Categoria</label>
+                        </div>
+                        <div>
+                            <input name="searchType" type="radio">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

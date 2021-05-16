@@ -1,48 +1,59 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{ 
+    string title = "Google Books";
+    var vb = ViewBag as Dictionary<string, object>;
+    if (ViewBag != null && ViewBag.Title != null) {
+        title = ViewBag.Title + " - GoogleBooks";
+    }
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - DesafioRiachuello</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>@title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/lib/fontawesome-free-5.15.3-web/css/all.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        .toast {
+            z-index: 99999;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DesafioRiachuello</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+<body style="overflow:hidden">
+    @if (ViewBag != null && (string.IsNullOrWhiteSpace(ViewBag.Msg) == false || string.IsNullOrWhiteSpace(ViewBag.Erro) == false))
+    {
+        if (string.IsNullOrWhiteSpace(ViewBag.Msg) == false)
+        {
+            <text>
+                <div class="toast" style="position: absolute;top: 0;right: 0;">
+                    <div class="toast-body alert-success">
+                        @ViewBag.Msg
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - DesafioRiachuello - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+            </text>
+        }
+        if (string.IsNullOrWhiteSpace(ViewBag.Erro) == false)
+        {
+            <text>
+                <div class="toast" style="position: absolute; top: 0; right: 0;">
+                    <div class="toast-header">Erro</div>
+                    <div class="toast-body alert-danger">
+                        @ViewBag.Erro
+                    </div>
+                </div>
+            </text>
+        }
+        <script>
+            document.onreadystatechange = (function () {
+                setTimeout(x => { $('.toast').toast({ delay: 3000 }).toast('show'); }, 200);
+            });
+        </script>
+    }
+    @RenderBody();
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

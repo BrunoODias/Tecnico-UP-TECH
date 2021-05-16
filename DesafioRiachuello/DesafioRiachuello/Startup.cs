@@ -1,3 +1,6 @@
+using DesafioRiachuello.Interfaces;
+using DesafioRiachuello.Services;
+using DesafioRiachuelloDAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +27,16 @@ namespace DesafioRiachuello
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddAuthentication("DefaultScheme")
+                .AddCookie("DefaultScheme",
+                opt => {
+                    opt.LoginPath = "/Account/Login";
+                    opt.AccessDeniedPath = "/Account/Login";
+                    opt.Cookie.Name = "AuthorizationCookie";
+                });
+
+            services.AddScoped<IUserDal,UserDal>();
+            services.AddScoped<IAutenticationService,AutenticationService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,13 +57,14 @@ namespace DesafioRiachuello
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Account}/{action=Login}/{id?}");
             });
         }
     }

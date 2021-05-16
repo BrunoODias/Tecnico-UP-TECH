@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "_Layout";
+    ViewBag.Title = "Cadastrar";
+}
+
+
+<form method="post"  asp-controller="Account" asp-action="Register" class="form col-sm-6 m-auto">
+    <div class="my-2 form-row">
+        <label for="Name">Nome:</label>
+        <input name="Name" id="Name" class="form-control form-control-sm">
+    </div>
+    <div class="my-2 form-row">
+        <label for="Email">Email:</label>
+        <input name="Email" id="Email" type="email" class="form-control form-control-sm">
+    </div>
+    <div class="my-2 form-row">
+        <label for="UserName">Nome de usuário:</label>
+        <input name="UserName" id="UserName" class="form-control form-control-sm">
+    </div>
+    <div class="my-2 form-row">
+        <label for="Password">Senha:</label>
+        <input name="Password" id="Password" type="password" class="form-control form-control-sm">
+    </div>
+    <div class="my-2 form-row">
+        <label for="BirthDate">Data de nascimento:</label>
+        <input name="BirthDate" id="BirthDate" type="date" class="form-control form-control-sm">
+    </div>
+    <div class="my-2 form-row justify-content-end">
+        <button type="submit" class="btn btn-success">Registrar</button>
+    </div>
+    <p class="m-auto" style="width: fit-content;">
+        Já possui uma conta? <a href="/Account/Login">Entrar</a>
+    </p>
+</form>

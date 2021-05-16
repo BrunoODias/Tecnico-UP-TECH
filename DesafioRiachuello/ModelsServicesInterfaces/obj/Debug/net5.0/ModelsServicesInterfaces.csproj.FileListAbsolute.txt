@@ -1,0 +1,12 @@
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.csprojAssemblyReference.cache
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.AssemblyInfoInputs.cache
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.AssemblyInfo.cs
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\bin\Debug\net5.0\ModelsServicesInterfaces.deps.json
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\bin\Debug\net5.0\ModelsServicesInterfaces.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\bin\Debug\net5.0\ref\ModelsServicesInterfaces.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\bin\Debug\net5.0\ModelsServicesInterfaces.pdb
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ref\ModelsServicesInterfaces.dll
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.pdb
