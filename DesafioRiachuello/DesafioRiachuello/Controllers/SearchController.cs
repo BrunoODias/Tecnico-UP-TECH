@@ -1,4 +1,5 @@
-﻿using DesafioRiachuello.Models;
+﻿using DesafioRiachuello.Interfaces;
+using DesafioRiachuello.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ModelsServicesInterfaces;
@@ -10,12 +11,14 @@ using System.Threading.Tasks;
 namespace DesafioRiachuello.Controllers
 {
     [Authorize]
-    public class SearchController : Controller
+    public class SearchController : WebController
     {
         private GoogleAPIConnection _googleAPIConnection { get; set; }
-        public SearchController(GoogleAPIConnection googleAPIConnection)
+        private IUserDal _userDal { get; set; }
+        public SearchController(GoogleAPIConnection googleAPIConnection, IUserDal userDal)
         {
             _googleAPIConnection = googleAPIConnection;
+            _userDal = userDal;
         }
 
         [Route("/Search/GetBookName/{term}/{page=0}")]
@@ -35,6 +38,7 @@ namespace DesafioRiachuello.Controllers
             ViewData["BooksToDisplay"] = toDisplay;
             ViewData["CurrentPage"] = page;
             ViewData["TotalPages"] = totalPages;
+            _userDal.setFavorites(books,getUserId());
             return View("/views/Home/Index.cshtml");
         }
 
@@ -53,6 +57,7 @@ namespace DesafioRiachuello.Controllers
             ViewData["BooksToDisplay"] = toDisplay;
             ViewData["CurrentPage"] = page;
             ViewData["TotalPages"] = totalPages;
+            _userDal.setFavorites(books,getUserId());
             return View("/views/Home/Index.cshtml");
         }
 
@@ -72,6 +77,7 @@ namespace DesafioRiachuello.Controllers
             ViewData["BooksToDisplay"] = toDisplay;
             ViewData["CurrentPage"] = page;
             ViewData["TotalPages"] = totalPages;
+            _userDal.setFavorites(books,getUserId());
             return View("/views/Home/Index.cshtml");
         }
     }

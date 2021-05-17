@@ -10,3 +10,15 @@ C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServic
 C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.dll
 C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ref\ModelsServicesInterfaces.dll
 C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.pdb
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\bin\Debug\net5.0\ModelsServicesInterfaces.deps.json
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\bin\Debug\net5.0\ModelsServicesInterfaces.dll
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\bin\Debug\net5.0\ref\ModelsServicesInterfaces.dll
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\bin\Debug\net5.0\ModelsServicesInterfaces.pdb
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.csprojAssemblyReference.cache
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.AssemblyInfoInputs.cache
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.AssemblyInfo.cs
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.dll
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ref\ModelsServicesInterfaces.dll
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\ModelsServicesInterfaces\obj\Debug\net5.0\ModelsServicesInterfaces.pdb

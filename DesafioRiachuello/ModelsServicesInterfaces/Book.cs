@@ -23,12 +23,22 @@ namespace ModelsServicesInterfaces
         public int PageCount { get; internal set; }
         public string Publisher { get; internal set; }
 
-        public string GetPhoto()
+        public string GetPhoto(bool completePhoto = false)
         {
-            if (string.IsNullOrWhiteSpace(Thumbnail) == false)
-                return Thumbnail;
-            if (string.IsNullOrWhiteSpace(Photo) == false)
-                return Thumbnail;
+            if (completePhoto)
+            {
+                if (string.IsNullOrWhiteSpace(Photo) == false)
+                    return Photo;
+                if (string.IsNullOrWhiteSpace(Thumbnail) == false)
+                    return Thumbnail;
+            }
+            else
+            {
+                if (string.IsNullOrWhiteSpace(Thumbnail) == false)
+                    return Thumbnail;
+                if (string.IsNullOrWhiteSpace(Photo) == false)
+                    return Photo;
+            }
             return "/nophoto.jpg";
         }
     }

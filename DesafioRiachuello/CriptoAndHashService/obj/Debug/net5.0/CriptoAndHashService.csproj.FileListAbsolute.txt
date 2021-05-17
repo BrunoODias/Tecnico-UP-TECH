@@ -10,3 +10,15 @@ C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\CriptoAndHas
 C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\CriptoAndHashService.dll
 C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\ref\CriptoAndHashService.dll
 C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\CriptoAndHashService.pdb
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\bin\Debug\net5.0\CriptoAndHashService.deps.json
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\bin\Debug\net5.0\CriptoAndHashService.dll
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\bin\Debug\net5.0\ref\CriptoAndHashService.dll
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\bin\Debug\net5.0\CriptoAndHashService.pdb
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\CriptoAndHashService.csprojAssemblyReference.cache
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\CriptoAndHashService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\CriptoAndHashService.AssemblyInfoInputs.cache
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\CriptoAndHashService.AssemblyInfo.cs
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\CriptoAndHashService.csproj.CoreCompileInputs.cache
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\CriptoAndHashService.dll
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\ref\CriptoAndHashService.dll
+C:\Users\bruno\Downloads\Tecnico-UP-TECH-master\Tecnico-UP-TECH-master\DesafioRiachuello\CriptoAndHashService\obj\Debug\net5.0\CriptoAndHashService.pdb

@@ -64,5 +64,49 @@ Object.freeze(Toast);
         )
     }
     window.OnKeyPress = OnKeyPress;
+
+
+    $('.favoriteToggle').on('click', function (event) {
+        var favorited = $(this).attr('isfavorite') == 'true';
+        var model = $(this).attr('model');
+        var url = "/Account";
+        if (favorited)
+            url += "/RemoveFavorite";
+        else
+            url += "/AddFavorite";
+        $.ajax({
+            method: 'POST',
+            url: url,
+            data: JSON.parse(model),
+            success: function (msg) {
+                if (favorited) {
+                    $(event.currentTarget).removeClass('favorited-book');
+                    $(event.currentTarget).attr('isfavorite', false);
+                }
+                else {
+                    $(event.currentTarget).addClass('favorited-book');
+                    $(event.currentTarget).attr('isfavorite', true);
+                }
+
+                Toast.Success(msg);
+                $.ajax({
+                    url: "/home/RefreshLeftMenu",
+                    success: function (html) {
+                        $('#favoritesBlock').css('z-index', '999');
+                        $('.leftMenu').removeClass('menu-open');
+                        $('.toggleFavoritesMenu').removeClass('rotate');
+                        setTimeout(function (e) {
+                        $('#favoritesBlock').css('z-index', '-1');
+                            $('.LeftMenuContainer')[0].innerHTML = html;
+                        }, 1000);
+                    },
+                    error: window.location.reload
+                });
+            },
+            error: function (msg) {
+                Toast.Error(msg.responseText, 'Erro ao executar a ação');
+            }
+        });
+    });
 })();
 Object.freeze(OnKeyPress);

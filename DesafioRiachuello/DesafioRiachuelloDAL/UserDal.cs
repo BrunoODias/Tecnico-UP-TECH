@@ -111,12 +111,13 @@ namespace DesafioRiachuelloDAL
                 return false;
             }
 
-            string comando = "INSERT INTO Favorites (IdUser,Code,Name,Gender)VALUES(@IdUser, @Code, @Name, @Gender)";
+            string comando = "INSERT INTO Favorites (IdUser,Code,Name,Gender,GoogleBooksURL)VALUES(@IdUser, @Code, @Name, @Gender,@GoogleBooksURL)";
             base.ExecuteNonQuery(comando, new List<SqlParameter>() {
                 new SqlParameter("IdUser",IdUser),
                 new SqlParameter("Code",book.Code),
                 new SqlParameter("Name",book.Name),
-                new SqlParameter("Gender",book.Gender)
+                new SqlParameter("Gender",book.Gender),
+                new SqlParameter("GoogleBooksURL",book.GoogleBooksURL)
             });
             erros = "";
             return true;
@@ -137,6 +138,45 @@ namespace DesafioRiachuelloDAL
             });
             erros = "";
             return true;
+        }
+
+        public void setFavorites(List<Book> books,int idUser)
+        {
+            try
+            {
+                foreach (var current in books)
+                    current.isFavorite = false;
+                string comando = "SELECT Code FROM Favorites WHERE IdUser = @IdUser";
+                var res = base.ExecuteReader(comando, new SqlParameter("IdUser", idUser));
+                if (res != null)
+                {
+                    foreach (var current in res)
+                    {
+                        var book = books.Find(x => x.Code == Convert.ToString(current.Code));
+                        if(book != null)
+                            book.isFavorite = true;
+                    }
+                };
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        public void setFavorite(Book book,int idUser)
+        {
+            try
+            {
+                book.isFavorite = false;
+                var res = base.ExecuteScalar("SELECT Code FROM Favorites WHERE IdUser = @IdUser AND Code = @Code ", new List<SqlParameter>(){new SqlParameter("Code", book.Code),new SqlParameter("IdUser", idUser)});
+                if (res != null)
+                    book.isFavorite = true;
+            }
+            catch (Exception e)
+            {
+
+            }
         }
     }
 }

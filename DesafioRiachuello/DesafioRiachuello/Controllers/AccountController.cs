@@ -67,12 +67,11 @@ namespace DesafioRiachuello.Controllers
                 return ReturnMsgToFront("Register", "Usuário cadastrado com sucesso!");
         }
 
-
-        public IActionResult AddFavorite(string model)
+        [HttpPost]
+        public IActionResult AddFavorite(Book book)
         {
             try
             {
-                var book = Newtonsoft.Json.JsonConvert.DeserializeObject<Book>(model);
                 string erros = "";
                 _userDal.addFavorite(getUserId(), book, out erros);
                 if (string.IsNullOrWhiteSpace(erros))
@@ -84,17 +83,17 @@ namespace DesafioRiachuello.Controllers
                     return BadRequest(erros);
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return BadRequest("Erro ao tentar adicionar aos favoritos");
             }
 
         }
 
-        public IActionResult RemoveFavorite(string model) {
+        [HttpPost]
+        public IActionResult RemoveFavorite(Book book) {
             try
             {
-                var book = Newtonsoft.Json.JsonConvert.DeserializeObject<Book>(model);
                 string erros = "";
                 _userDal.removeFavorite(getUserId(), book, out erros);
                 if (string.IsNullOrWhiteSpace(erros))

@@ -1,26 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\DesafioRiachuelloDAL\\DesafioRiachuelloDAL.csproj": {}
+    "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\DesafioRiachuelloDAL\\DesafioRiachuelloDAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj": {
+    "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj",
+        "projectUniqueName": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj",
         "projectName": "CriptoAndHashService",
-        "projectPath": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj",
-        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\CriptoAndHashService\\obj\\",
+        "projectPath": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\CriptoAndHashService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -54,27 +61,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.3.21202.5\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\DesafioRiachuelloDAL\\DesafioRiachuelloDAL.csproj": {
+    "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\DesafioRiachuelloDAL\\DesafioRiachuelloDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\DesafioRiachuelloDAL\\DesafioRiachuelloDAL.csproj",
+        "projectUniqueName": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\DesafioRiachuelloDAL\\DesafioRiachuelloDAL.csproj",
         "projectName": "DesafioRiachuelloDAL",
-        "projectPath": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\DesafioRiachuelloDAL\\DesafioRiachuelloDAL.csproj",
-        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\DesafioRiachuelloDAL\\obj\\",
+        "projectPath": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\DesafioRiachuelloDAL\\DesafioRiachuelloDAL.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\DesafioRiachuelloDAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -82,11 +96,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj": {
-                "projectPath": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj"
+              "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj": {
+                "projectPath": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj"
               },
-              "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj": {
-                "projectPath": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj"
+              "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj": {
+                "projectPath": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj"
               }
             }
           }
@@ -125,27 +139,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.3.21202.5\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj": {
+    "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj",
+        "projectUniqueName": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj",
         "projectName": "ModelsServicesInterfaces",
-        "projectPath": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj",
-        "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\ModelsServicesInterfaces\\obj\\",
+        "projectPath": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\ModelsServicesInterfaces\\ModelsServicesInterfaces.csproj",
+        "packagesPath": "C:\\Users\\bruno\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\ModelsServicesInterfaces\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\DevExtreme\\System\\DevExtreme\\Bin\\AspNetCore": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -169,9 +190,17 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -189,7 +218,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.3.21202.5\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -15,5 +15,7 @@ namespace DesafioRiachuello.Interfaces
         public List<Book> getFavorites(int IdUser);
         public bool addFavorite(int IdUser, Book book, out string erros);
         public bool removeFavorite(int IdUser, Book book,out string erros);
+        public void setFavorite(Book book, int idUser);
+        public void setFavorites(List<Book> books, int idUser);
     }
 }

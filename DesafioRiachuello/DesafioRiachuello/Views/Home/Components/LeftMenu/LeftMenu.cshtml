@@ -1,110 +1,54 @@
 ﻿@model List<ModelsServicesInterfaces.ListBook>
 
-<style>
-    .leftMenu {
-        width: 260px;
-        position: relative;
-        background: rgb(230 230 230);
-        left: -260px;
-        transition: all 1s;
-        z-index: 3 !important;
-    }
-
-    .menu-open {
-        left: 0px;
-    }
-
-    .LeftMenuContainer {
-        overflow: hidden;
-    }
-
-    .fit-content {
-        width: fit-content;
-    }
-
-    .accordion-button {
-        font-size: 1rem;
-        background: #e7f1ff;
-        color: black;
-    }
-
-    .accordion-header {
-        color: #585858;
-    }
-
-    .accordion-body {
-        background: #f1f1f1;
-        border: solid 1px rgb(220 220 220);
-        max-height: 20rem;
-        overflow-y: auto;
-    }
-
-    .accordion-collapse {
-        color: #585858;
-    }
-
-    .book-item-list {
-        text-align: center;
-    }
-
-        .book-item-list > a {
-            text-decoration: none;
-            color: #4e4e4e;
-            font-size: 0.8rem;
-        }
-</style>
-
-<div class="LeftMenuContainer">
-    <div class="col pt-3 leftMenu">
-        @if (Model != null)
-        {
-            <div class="row mb-2">
-                <label class="m-auto fit-content" style="font-size: 1.2rem;">Favoritos</label>
-            </div>
-            <div>
-                <div class="accordion mx-2" id="FavoritesBooksPanel">
-                    @foreach (var CurrentFavorite in Model)
-                    {
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="Favorites">
-                                <button class="accordion-button p-2 collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="@("#Favorites" + CurrentFavorite.GenderType)Body" aria-expanded="false">
-                                    @Html.Raw(CurrentFavorite.Gender)
-                                </button>
-                            </h2>
-                            <div id="@("Favorites" + CurrentFavorite.GenderType)Body" class="accordion-collapse collapse" aria-labelledby="@("Favorites" + CurrentFavorite.GenderType)">
-                                <div class="accordion-body p-0 justify-content-end">
-                                    @{
-                                        bool first = true;
-                                    }
-                                    @foreach (var CurrentBook in CurrentFavorite.Books)
+<div class="col pt-3 leftMenu">
+    @if (Model != null)
+    {
+        <div class="row mb-2">
+            <label class="m-auto fit-content" style="font-size: 1.2rem;">Favoritos</label>
+        </div>
+        <div>
+            <div class="accordion mx-2" id="FavoritesBooksPanel">
+                @foreach (var CurrentFavorite in Model)
+                {
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="Favorites">
+                            <button class="accordion-button p-2 collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="@("#Favorites" + CurrentFavorite.GenderType)Body" aria-expanded="false">
+                                @Html.Raw(CurrentFavorite.Gender)
+                            </button>
+                        </h2>
+                        <div id="@("Favorites" + CurrentFavorite.GenderType)Body" class="accordion-collapse collapse" aria-labelledby="@("Favorites" + CurrentFavorite.GenderType)">
+                            <div class="accordion-body p-0 justify-content-end">
+                                @{
+                                    bool first = true;
+                                }
+                                @foreach (var CurrentBook in CurrentFavorite.Books)
+                                {
+                                    @if (first)
                                     {
-                                        @if (first)
-                                        {
-                                            first = false;
-                                        }
-                                        else
-                                        {
-                                            <hr class="my-1" />
-                                        }
-                                        <div class="book-item-list mx-3">
-                                            <a href="/Books/Details/@CurrentBook.Code">@CurrentBook.Name</a>
-                                        </div>
+                                        first = false;
                                     }
-                                </div>
+                                    else
+                                    {
+                                        <hr class="my-1" />
+                                    }
+                                    <div class="book-item-list mx-3">
+                                        <a href="/Books/Details/@CurrentBook.Code">@CurrentBook.Name</a>
+                                    </div>
+                                }
                             </div>
                         </div>
-                    }
-                </div>
+                    </div>
+                }
             </div>
-        }
-        else
-        {
-            <p class="alert alert-danger p-2">
-                <label class="m-auto fit-content" style="text-align: center;">
-                    Não há nenhum livro favoritado
-                </label>
-            </p>
-        }
-    </div>
+        </div>
+    }
+    else
+    {
+        <p class="alert alert-danger p-2">
+            <label class="m-auto fit-content" style="text-align: center;">
+                Não há nenhum livro favoritado
+            </label>
+        </p>
+    }
 </div>

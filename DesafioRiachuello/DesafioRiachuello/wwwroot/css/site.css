@@ -80,7 +80,8 @@ body {
     border-radius: 10px !important;
 }
 ::-webkit-scrollbar {
-    width: 10px!important;
+    width: 7px!important;
+    height: 6px!important;
 }
 .scrollable {
     overflow: auto;
@@ -137,11 +138,66 @@ body {
 }
 
 .classification-star {
+    width: fit-content;
     font-size: 1.4rem;
 }
 
 .classification-star-selected {
+    width: fit-content;
     font-size: 1.4rem;
     color: yellow;
     -webkit-text-stroke: 2px black;
 }
+
+.leftMenu {
+    width: 260px;
+    position: relative;
+    background: rgb(230 230 230);
+    left: -260px;
+    transition: all 1s;
+    z-index: 3 !important;
+    height:100vh;
+}
+
+.menu-open {
+    left: 0px;
+}
+
+.LeftMenuContainer {
+    overflow: hidden;
+}
+
+.fit-content {
+    width: fit-content;
+}
+
+.accordion-button {
+    font-size: 1rem;
+    background: #e7f1ff;
+    color: black;
+}
+
+.accordion-header {
+    color: #585858;
+}
+
+.accordion-body {
+    background: #f1f1f1;
+    border: solid 1px rgb(220 220 220);
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.accordion-collapse {
+    color: #585858;
+}
+
+.book-item-list {
+    text-align: center;
+}
+
+    .book-item-list > a {
+        text-decoration: none;
+        color: #4e4e4e;
+        font-size: 0.8rem;
+    }

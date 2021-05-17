@@ -15,6 +15,9 @@ namespace DesafioRiachuello.Controllers
         {
             return View();
         }
-
+        public IActionResult RefreshLeftMenu()
+        {
+            return ViewComponent("LeftMenu");
+        }
     }
 }

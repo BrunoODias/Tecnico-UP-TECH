@@ -1,0 +1,111 @@
+﻿@model ModelsServicesInterfaces.Book
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = Model.Name;
+}
+
+<style>
+    #Page {
+        background: #f1f1f1;
+        max-width: 40rem;
+        min-width: 300px;
+        overflow: hidden;
+    }
+    #PrincipalContent {
+        position: absolute;
+        top: 3.4rem;
+        max-width: 40rem;
+        height: calc(100% - 10rem);
+        width: 100%;
+        word-break: break-word;
+    }
+    .book-photo {
+        width: 15rem;
+        height: 17rem;
+        min-width: 15rem;
+        max-width: 15rem;
+        min-height: 17rem;
+        max-height: 17rem;
+        border: solid 1px;
+    }
+    .book-attribuitions{
+        width: fit-content;
+        margin: auto;
+        margin-bottom: 0.5rem;
+    }
+</style>
+<div class="m-auto" id="Page">
+    @await Component.InvokeAsync("NavBar")
+    <div class="LeftMenuContainer">
+        @await Component.InvokeAsync("LeftMenu")
+    </div>
+
+    <div id="PrincipalContent">
+        <div class="col" style="height: calc(100% - 0.5rem);">
+            <div class="row m-4 d-flex" style=" flex-wrap: nowrap; overflow-x: auto;">
+                <div class="col mb-4">
+                    <div style="width: fit-content;margin: auto;">
+                        <img class="book-photo" src="@Model.GetPhoto(true)">
+                    </div>
+                </div><div class="col d-flex align-items-center" style="min-width: 17rem;">
+                    <div class="m-auto">
+                        <div class="row book-attribuitions">
+                            @Model.Name
+                            @if (Model.PageCount > 0)
+                            {
+                                <text> - @Model.PageCount páginas</text>
+                            }
+                        </div>
+                        <div class="row book-attribuitions">@Model.Author</div>
+                        <div class="row book-attribuitions">@Model.Publisher @((string.IsNullOrWhiteSpace(Model.Publisher) || string.IsNullOrWhiteSpace(Model.PublishDate)) ? "" : "-") @Model.PublishDate</div>
+                        <div class="row d-flex book-attribuitions">
+                            @{
+                                int points = 0;
+                                if (int.TryParse(Model.Recommendation, out points))
+                                {
+                                    for (int i = 0; i < points; i++)
+                                    {
+                                        <i class="fas fa-star classification-star-selected" style="width: fit-content;"></i>
+
+                                    }
+                                    for (int i = points; i < 5; i++)
+                                    {
+                                        <i class="fas fa-star classification-star"></i>
+                                    }
+                                }
+                            }
+                        </div>
+                        <div class="row book-attribuitions">
+                            <i class="clickable fas fa-heart favoriteToggle @(Model.isFavorite? "favorited-book": "")" model="@Newtonsoft.Json.JsonConvert.SerializeObject(Model)"
+                               isfavorite="@(Model.isFavorite? "true": "false")"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 scrollable p-4" style="height: calc(100vh - 30rem);width: calc(100% - 0.1rem);">
+                <span style="width: fit-content;margin: auto;">@Html.Raw(Model.Description)</span>
+            </div>
+            @if (string.IsNullOrWhiteSpace(Model.GoogleBooksURL) == false)
+            {
+                <div class="row m-2">
+                    <a href="@Model.GoogleBooksURL" class="btn btn-primary">Abrir no Google Livros</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function (e) {
+        $('#Page').css('height', `${window.innerHeight}px`);
+        $('#Page').css('max-height', `${window.innerHeight}px`);
+
+
+        $('.leftMenu').css('height', `calc(${$('html').height()}px - ${$('.navbar').height()}px)`);
+
+        document.getElementsByClassName('toggleFavoritesMenu')[0].addEventListener('click', function (e) {
+            $(this).toggleClass('rotate');
+            $('.leftMenu').toggleClass('menu-open');
+            $('.LeftMenuContainer').toggleClass('menu-open');
+        });
+    });
+</script>

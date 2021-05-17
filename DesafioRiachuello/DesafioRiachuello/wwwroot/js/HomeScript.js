@@ -49,34 +49,4 @@ document.addEventListener('DOMContentLoaded', function (e) {
         OnKeyPress('Enter', getSearch);
     })();
 
-    $('.favoriteToggle').on('click', function (event) {
-        var favorited = $(this).attr('isfavorite')=='true';
-        var model = $(this).attr('model');
-        var url = "/Account";
-        if (favorited) 
-            url += "/RemoveFavorite";
-        else
-            url += "/AddFavorite";
-        $.ajax({
-            method: 'GET',
-            url,
-            data: { model: model },
-            success: function (msg) {
-                if (favorited) {
-                    $(event.currentTarget).removeClass('favorited-book');
-                    $(event.currentTarget).attr('isfavorite', false);
-                }
-                else {
-                    $(event.currentTarget).addClass('favorited-book');
-                    $(event.currentTarget).attr('isfavorite', true);
-                }
-
-                Toast.Success(msg);
-            },
-            error: function (msg) {
-                Toast.Error(msg.responseText,'Erro ao executar a ação');
-            }
-        });
-    });
-
 }, false);

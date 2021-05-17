@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "47+k0UV92aWVcLFafnbh+bi0+uXhj1ZGeOxiU8Sqs/q2koZG/uGVNW9X9512MxKFnpvY04U9YNI9cMsgyyjTww==",
+  "dgSpecHash": "17sAzgOcoXI7LxYHIqI/UC0E6RzqD80sXm6NNVX2U/vNcJ+EQSOAXPODORn2tIWi6sY3kGxGTpRB5GS9On97MQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruno\\Desktop\\Projetos\\DesafioRiachuello\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj",
+  "projectFilePath": "C:\\Users\\bruno\\Documents\\GitHub\\Tecnico-UP-TECH\\DesafioRiachuello\\CriptoAndHashService\\CriptoAndHashService.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

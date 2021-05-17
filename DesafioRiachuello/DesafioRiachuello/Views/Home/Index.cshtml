@@ -9,10 +9,13 @@
         overflow: hidden;
     }
 </style>
-<div class="m-auto" id="Page">    
+<div class="m-auto" id="Page">
     @await Component.InvokeAsync("NavBar")
-    @await Component.InvokeAsync("LeftMenu")
-    @await Component.InvokeAsync("PrincipalContent", ViewData["BooksToDisplay"])
-</div>
 
-<script src="~/js/HomeScript.js"></script>
+    <div class="LeftMenuContainer">
+        @await Component.InvokeAsync("LeftMenu")
+    </div>
+        @await Component.InvokeAsync("PrincipalContent", ViewData["BooksToDisplay"])
+    </div>
+
+    <script src="~/js/HomeScript.js"></script>

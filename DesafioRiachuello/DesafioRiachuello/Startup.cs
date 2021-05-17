@@ -41,6 +41,7 @@ namespace DesafioRiachuello
             services.AddScoped<IAutenticationService,AutenticationService>();
             services.AddScoped<WebClient>();
             services.AddScoped<GoogleAPIConnection>();
+            services.AddSingleton<IConfiguration>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
