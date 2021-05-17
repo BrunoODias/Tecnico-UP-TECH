@@ -120,3 +120,28 @@ body {
 .active {
     background: #e7f1ff !important;
 }
+
+.custom-toast {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 999;
+    width: fit-content;
+    min-width: 40%;
+    max-width: 70%;
+}
+
+.custom-toast>.toast-head {
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+}
+
+.classification-star {
+    font-size: 1.4rem;
+}
+
+.classification-star-selected {
+    font-size: 1.4rem;
+    color: yellow;
+    -webkit-text-stroke: 2px black;
+}

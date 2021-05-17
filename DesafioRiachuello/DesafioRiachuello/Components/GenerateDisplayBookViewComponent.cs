@@ -5,7 +5,7 @@ namespace DesafioRiachuello.Components
     public class GenerateDisplayBookViewComponent:ViewComponent
     {
         public IViewComponentResult Invoke(ModelsServicesInterfaces.Book book) {
-            return View("GenerateDisplayBook", book);
+            return View("/Views/Home/Components/GenerateDisplayBook/GenerateDisplayBook.cshtml", book);
         }
     }
 }

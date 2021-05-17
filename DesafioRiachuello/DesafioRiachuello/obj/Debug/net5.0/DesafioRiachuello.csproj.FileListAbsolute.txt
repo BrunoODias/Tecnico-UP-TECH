@@ -60,3 +60,4 @@ C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiach
 C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuello\obj\Debug\net5.0\Razor\Views\Home\Components\LeftMenu\LeftMenu.cshtml.g.cs
 C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuello\obj\Debug\net5.0\Razor\Views\Home\Components\NavBar\NavBar.cshtml.g.cs
 C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuello\obj\Debug\net5.0\Razor\Views\Home\Components\PrincipalContent\PrincipalContent.cshtml.g.cs
+C:\Users\Bruno\Desktop\Projetos\DesafioRiachuello\DesafioRiachuello\DesafioRiachuello\bin\Debug\net5.0\Newtonsoft.Json.dll

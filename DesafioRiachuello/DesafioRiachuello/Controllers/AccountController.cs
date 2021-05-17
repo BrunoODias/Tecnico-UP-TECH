@@ -2,6 +2,7 @@
 using DesafioRiachuello.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using ModelsServicesInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +65,50 @@ namespace DesafioRiachuello.Controllers
                 return ReturnErrorToFront("Register", erros);
             }
                 return ReturnMsgToFront("Register", "Usuário cadastrado com sucesso!");
+        }
+
+
+        public IActionResult AddFavorite(string model)
+        {
+            try
+            {
+                var book = Newtonsoft.Json.JsonConvert.DeserializeObject<Book>(model);
+                string erros = "";
+                _userDal.addFavorite(getUserId(), book, out erros);
+                if (string.IsNullOrWhiteSpace(erros))
+                {
+                    return Ok("Adicionado aos favoritos com sucesso!");
+                }
+                else
+                {
+                    return BadRequest(erros);
+                }
+            }
+            catch (Exception)
+            {
+                return BadRequest("Erro ao tentar adicionar aos favoritos");
+            }
+
+        }
+
+        public IActionResult RemoveFavorite(string model) {
+            try
+            {
+                var book = Newtonsoft.Json.JsonConvert.DeserializeObject<Book>(model);
+                string erros = "";
+                _userDal.removeFavorite(getUserId(), book, out erros);
+                if (string.IsNullOrWhiteSpace(erros))
+                {
+                    return Ok("Removido dos favoritos com sucesso!");
+                }
+                else
+                {
+                    return BadRequest(erros);
+                }
+            }
+            catch (Exception) { 
+                return BadRequest("Erro ao tentar remover dos favoritos");
+            }
         }
     }
 }

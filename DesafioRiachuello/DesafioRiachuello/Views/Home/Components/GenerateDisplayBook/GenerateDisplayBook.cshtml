@@ -1,34 +1,51 @@
 ﻿@model ModelsServicesInterfaces.Book;
-    <div class="card-book col-sm w-100 m-2">
-        <div class="row">
-            <div class="d-flex" style="flex-wrap: wrap;">
-                <div class="col p-4" style="justify-content: center;">
-                    <div class="m-auto" style="width: fit-content;">
-                        <img class="img-book" src="@(string.IsNullOrWhiteSpace(Model.Photo) ? "/nophoto.jpg" : Model.Photo)">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" style="text-align: center;min-width: 11rem;display: flex;align-items: center;justify-content: center;">
-                <div style="margin: auto;">
-                    <div class="row mb-2">
-                        <a class="clickable" style="font-size: 1.4rem;" href="/Books/Details/@Model.Code">
-                            @Model.Name
-                        </a>
-                    </div>
-                    <div class="row mb-2">
-                        <a class="clickable" style="font-size: 1.4rem;" href="@("/Search/" + Model.Author)">
-                            @Model.Author
-                        </a>
-                    </div>
-                    <div class="row mb-2">
-                        <span style="font-size: 1.4rem;">@Model.PublicationDate</span>
-                    </div>
-                    <div class="row mb-2">
-                        <i  class="clickable fas fa-heart favoriteToggle @(Model.isFavorite? "favorited-book": "")" isfavorite="@(Model.isFavorite? "true": "false") bookCode="@Model.Code"></i>
-                    </div>
+<div class="card-book col-sm w-100 m-2">
+    <div class="row">
+        <div class="d-flex" style="flex-wrap: wrap;">
+            <div class="col p-4" style="justify-content: center;">
+                <div class="m-auto" style="width: fit-content;">
+                    <img class="img-book" src="@Model.GetPhoto()">
                 </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col" style="text-align: center;min-width: 11rem;display: flex;align-items: center;justify-content: center;">
+            <div style="margin: auto;">
+                <div class="row mb-2">
+                    <a class="clickable" style="font-size: 1.4rem;" href="/Books/Details/@Model.Code">
+                        @Model.Name
+                    </a>
+                </div>
+                <div class="row mb-2">
+                    <a class="clickable" style="font-size: 1.4rem;" href="@("/Search/GetAuthorName/" + Model.Author)">
+                        @Model.Author
+                    </a>
+                </div>
+                <div class="row mb-2">
+                    <span style="font-size: 1.4rem;">@Model.PublishDate</span>
+                </div>
+                @if (string.IsNullOrWhiteSpace(Model.Recommendation) == false)
+                {
+                    <div class="mb-2 d-flex justify-content-center">
+                        @{
+                            int points = Convert.ToInt32((Model.Recommendation).Split('.')[0]);
+                        }
+                        @for (var i = 0; i < points; i++)
+                        {
+                            <i class="fas fa-star classification-star-selected"></i>
+                        }
+                        @for (var i = points; i < 5; i++)
+                        {
+                            <i class="fas fa-star classification-star"></i>
+                        }
+                    </div>
+                }
+                <div class="row mb-2">
+                    <i class="clickable fas fa-heart favoriteToggle @(Model.isFavorite? "favorited-book": "")" model="@Newtonsoft.Json.JsonConvert.SerializeObject(Model)"
+                       isfavorite="@(Model.isFavorite? "true": "false")"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

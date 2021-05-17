@@ -1,6 +1,7 @@
 ﻿using CriptoAndHashService;
 using DesafioRiachuello.Interfaces;
 using DesafioRiachuello.Models;
+using ModelsServicesInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -79,6 +80,63 @@ namespace DesafioRiachuelloDAL
                 erros = "Houve um erro ao salvar o usuário";
                 return false;
             }
+        }
+
+        public List<Book> getFavorites(int IdUser)
+        {
+            string comando = "SELECT Code,Name,Gender FROM Favorites WHERE IdUser = @IdUser;";
+            var res = ExecuteReader(comando, new SqlParameter("IdUser",IdUser));
+            if (res == null)
+                return null;
+
+            var books = new List<Book>();
+            foreach (var current in res) {
+                books.Add(
+                    new Book()
+                    {
+                        Code = current.Code,
+                        Name = current.Name,
+                        Gender = current.Gender,
+                    }
+                );
+            }
+            
+            return books;
+        }
+        public bool addFavorite(int IdUser, Book book, out string erros)
+        {
+            if (IdUser == 0 || book == null || string.IsNullOrWhiteSpace(book.Code) || string.IsNullOrWhiteSpace(book.Gender))
+            {
+                erros = "Parâmetros inválidos";
+                return false;
+            }
+
+            string comando = "INSERT INTO Favorites (IdUser,Code,Name,Gender)VALUES(@IdUser, @Code, @Name, @Gender)";
+            base.ExecuteNonQuery(comando, new List<SqlParameter>() {
+                new SqlParameter("IdUser",IdUser),
+                new SqlParameter("Code",book.Code),
+                new SqlParameter("Name",book.Name),
+                new SqlParameter("Gender",book.Gender)
+            });
+            erros = "";
+            return true;
+        }
+        public bool removeFavorite(int IdUser, Book book, out string erros)
+        {
+            if (IdUser == 0 || book == null || book.Code == null)
+            {
+                erros = "Parâmetros inválidos";
+                return false;
+            }
+
+            string comando = "DELETE FROM Favorites Where IdUser = @IdUser AND Code = @Code AND Name = @Name";
+            base.ExecuteNonQuery(comando, new List<SqlParameter>() { 
+                new SqlParameter("IdUser",IdUser),
+                new SqlParameter("Code",book.Code),
+                new SqlParameter("Name",book.Name)
+            });
+            erros = "";
+            return true;
         }
     }
 }

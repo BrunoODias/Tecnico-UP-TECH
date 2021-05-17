@@ -1,4 +1,5 @@
 ﻿using DesafioRiachuello.Models;
+using ModelsServicesInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,8 @@ namespace DesafioRiachuello.Interfaces
         public UserModel GetUser(UserLoginModel loginModel);
         public bool RegisterUser(UserModel userModel, out string erros);
         public bool IsValidLogin(UserLoginModel loginModel, out UserModel user);
+        public List<Book> getFavorites(int IdUser);
+        public bool addFavorite(int IdUser, Book book, out string erros);
+        public bool removeFavorite(int IdUser, Book book,out string erros);
     }
 }

@@ -9,7 +9,7 @@ namespace ModelsServicesInterfaces
         {
             get
             {
-                return Gender.UnnacentAndNormalize();
+                return Gender.RemoveSpecialCharacter();
             }
         }
 

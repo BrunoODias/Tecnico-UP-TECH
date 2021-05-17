@@ -4,12 +4,12 @@
         position: absolute;
         top: 3.4rem;
         max-width: 40rem;
-        height: calc(100% - 9.2rem);
+        height: calc(100% - 10rem);
         width: 100%;
     }
 
     #TabContent {
-        height: calc(100% - 3.3rem) !important;
+        height: calc(100% - 5.3rem) !important;
     }
 
     .tab-pane {
@@ -20,9 +20,18 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         overflow-y: hidden;
+        white-space: nowrap;
     }
     ::-webkit-scrollbar {
         width: 10px;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+    
+    .pagination > div {
+        width: fit-content;
     }
 </style>
 <div id="PrincipalContent">
@@ -54,7 +63,7 @@
                     <div class="tab-pane w-100 h-100 scrollable p-3 @(first? " show active d-flex " : "")" id="@currentTab.GenderType-tab" role="tabpanel" aria-labelledby="@currentTab.GenderType-tab">
                         @foreach (var currentBook in currentTab.Books)
                         {
-                            @if (currentBook.Code != 0)
+                            @if (string.IsNullOrWhiteSpace(currentBook.Code) == false)
                             {
                                 @await Component.InvokeAsync("GenerateDisplayBook", currentBook)
                             }
@@ -64,5 +73,54 @@
                 }
             }
         </div>
+    }
+    @if (ViewData["CurrentPage"] != null && ViewData["TotalPages"] != null) { 
+        <div class="row pagination">
+            <div class="btn btn-primary mx-2" id="btnBackList">Voltar 5</div>
+            <div class="btn btn-primary " id="btnPreviousPage">Anterior</div>
+            <div class="btn btn-primary mx-2 disabled">Página @ViewData["CurrentPage"] de @ViewData["TotalPages"]</div>
+            <div class="btn btn-primary " id="btnNextPage">Próxima</div>
+            <div class="btn btn-primary mx-2" id="btnMoveList">Adiantar 5</div>
+        </div>
+        <script>
+            (function () {
+                function MovePag(range) {
+                    var segments = location.pathname?.split('/');
+                    var last = Number(segments[segments.length - 1]);
+                    if (isNaN(last)) {
+                        if (range < 1) {
+                            return;
+                        }
+                        else if (range > @ViewData["TotalPages"]) {
+                            return;
+                        }
+                    }
+                    else if ((last + range < 0) || ((last + range) > @ViewData["TotalPages"])) {
+                        return;
+                    }
+
+                    if(isNaN(last)){
+                        segments.push(range);
+                    }
+                    else{
+                        last += range;
+                        segments[segments.length - 1] = last;
+                    }
+                    location.href = location.origin + segments.join('/');
+                };
+                document.getElementById('btnBackList').addEventListener('click', function (e) {
+                    MovePag(-5);
+                });
+                document.getElementById('btnPreviousPage').addEventListener('click', function (e) {
+                    MovePag(-1);
+                });
+                document.getElementById('btnNextPage').addEventListener('click', function (e) {
+                    MovePag(1);
+                });
+                document.getElementById('btnMoveList').addEventListener('click', function (e) {
+                    MovePag(5);
+                });
+            })();
+        </script>
     }
 </div>

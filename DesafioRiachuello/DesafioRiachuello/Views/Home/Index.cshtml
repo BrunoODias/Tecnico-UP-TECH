@@ -12,33 +12,7 @@
 <div class="m-auto" id="Page">    
     @await Component.InvokeAsync("NavBar")
     @await Component.InvokeAsync("LeftMenu")
-    @await Component.InvokeAsync("PrincipalContent")
+    @await Component.InvokeAsync("PrincipalContent", ViewData["BooksToDisplay"])
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function (e) {
-        $('#Page').css('height', `${window.innerHeight}px`);
-        $('#Page').css('max-height', `${window.innerHeight}px`);
-
-
-        $('.leftMenu').css('height', `calc(${$('html').height()}px - ${$('.navbar').height()}px)`);
-
-        document.getElementsByClassName('toggleFavoritesMenu')[0].addEventListener('click', function (e) {
-            $(this).toggleClass('rotate');
-            $('.leftMenu').toggleClass('menu-open');
-            $('.LeftMenuContainer').toggleClass('menu-open');
-        })
-
-        $('.nav-link').on('click', function (event) {
-            $('.nav-link.active').removeClass('active');
-            $('.nav-link.active').css('border-bottom', 'none');
-            $('.tab-pane.show.active').removeClass('show').removeClass('active').removeClass('d-flex');
-
-            $(this).addClass('active');
-            $(this).css('border-bottom', '#daf9ff');
-            $(`#${this.getAttribute('aria-controls')}`).addClass('show').addClass('active').addClass('d-flex');
-        });
-
-        $('#TabContentSelector > li > a').first().click();
-    }, false);
-</script>
+<script src="~/js/HomeScript.js"></script>

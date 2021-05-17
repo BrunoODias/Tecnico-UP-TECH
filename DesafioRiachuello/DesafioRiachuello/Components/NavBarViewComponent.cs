@@ -10,7 +10,7 @@ namespace DesafioRiachuello.Components
     {
         public IViewComponentResult Invoke()
         {
-            return View("NavBar");
+            return View("/Views/Home/Components/NavBar/NavBar.cshtml");
         }
     }
 }

@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ModelsServicesInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace DesafioRiachuello
@@ -37,6 +39,8 @@ namespace DesafioRiachuello
 
             services.AddScoped<IUserDal,UserDal>();
             services.AddScoped<IAutenticationService,AutenticationService>();
+            services.AddScoped<WebClient>();
+            services.AddScoped<GoogleAPIConnection>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
